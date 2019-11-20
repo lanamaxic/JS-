@@ -33,17 +33,27 @@ val = list.children[3].children[0];
 val = list.firstChild;
 val = list.firstElementChild;
 
+
 // Last child
-//val = list.lastChild;
-//val = list.lastElementChild;
+val = list.lastChild;
+val = list.lastElementChild;
 
 // Count child elements
-//val = list.childElementCount;
+val = list.childElementCount;
 
 // Get parent node
-//val = listItem.parentNode;
-//val = listItem.parentElement;
-//val = listItem.parentElement.parentElement;
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentNode.parentNode;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentNode.parentNode.parentNode;
+console.log(val);
 
 // Get next sibling
 //val = listItem.nextSibling;
