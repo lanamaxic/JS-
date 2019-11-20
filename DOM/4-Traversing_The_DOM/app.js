@@ -49,15 +49,24 @@ val = listItem.parentElement.parentElement.parentElement;
 val = listItem.parentElement.parentElement.parentElement.parentElement;
 val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement;
 val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentNode.parentNode;
-val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentNode.parentNode.parentNode;
+
+
+//EXERCISE
+list.children[2].style.color = 'red';
+
+let arr = Array.from(list.children)
+
+arr.forEach(function(item, index){
+    if (item.style.color == 'red') {
+        item.innerText = 'DONE!!!'
+    }
+})
+
 console.log(val);
 
 // Get next sibling
-//val = listItem.nextSibling;
-//val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 
 // Get prev sibling
 //val = listItem.previousSibling;
