@@ -30,8 +30,8 @@ list.children[3].children[0].id = 'test-link';
 val = list.children[3].children[0];
 
 // First child
-//val = list.firstChild;
-//val = list.firstElementChild;
+val = list.firstChild;
+val = list.firstElementChild;
 
 // Last child
 //val = list.lastChild;
