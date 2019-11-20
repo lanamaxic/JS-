@@ -69,6 +69,7 @@ val = listItem.nextSibling;
 val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 
 // Get prev sibling
-//val = listItem.previousSibling;
-//val = listItem.previousElementSibling;
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+
 console.log(val);
