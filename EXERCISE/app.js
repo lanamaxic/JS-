@@ -55,14 +55,13 @@ while (true) {
         guessCount--;
         alert("Please guess lower. You have " + guessCount + " guesses remaining.");
         
-      
       } else {
         guessCount--;
         alert("Please guess higher. You have " + guessCount + " guesses remaining.");
     }
   
     } else {
-      alert("MUh hahahahah you lose!");
+      alert("Sorry, you failed to guess the number in three attempts. The number was 0!");
       break;
     }
   } 
