@@ -29,3 +29,5 @@ li.appendChild(link);
 document.querySelector('ul.collection').appendChild(li);
 
 console.log(li);
+
+
