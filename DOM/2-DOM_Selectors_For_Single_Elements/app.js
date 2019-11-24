@@ -7,6 +7,7 @@
 
 
 const taskTitle = document.getElementById('task-title');
+
 //CHANGE THE STYLING
 taskTitle.style.background = '#333';
 
