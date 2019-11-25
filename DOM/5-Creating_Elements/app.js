@@ -31,3 +31,15 @@ document.querySelector('ul.collection').appendChild(li);
 console.log(li);
 
 
+function myFuction(arr){
+    let ul = document.createElement('ul')
+    arr.forEach(function(item, index){
+        if (item % 2 == 0) {
+          let li = document.createElement('li')  
+            li.innerText = item
+            ul.appendChild(li)
+            
+        }
+
+    }); document.write(ul);
+}

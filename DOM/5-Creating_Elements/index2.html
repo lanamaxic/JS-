@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <div id ='res'></div>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        function myFuction(arr) {
+            let ul = document.createElement('ul')
+            ul.style.fontWeight = 'bold'
+            ul.style.border = '4px dotted'
+           
+            arr.forEach(function (item) {
+                if (item % 2 == 0) {
+                    let li = document.createElement('li')
+                    li.style.color = 'black'
+                    li.style.backgroundColor = 'pink'
+                    li.innerText = item
+                    ul.appendChild(li)
+
+                }
+
+            });
+            document.body.appendChild(ul)
+
+        }
+
+        myFuction(arr)
+        
+        
+    </script>
+   
+</body>
+
+</html>

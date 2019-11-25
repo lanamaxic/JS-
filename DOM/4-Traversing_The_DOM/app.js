@@ -33,7 +33,6 @@ val = list.children[3].children[0];
 val = list.firstChild;
 val = list.firstElementChild;
 
-
 // Last child
 val = list.lastChild;
 val = list.lastElementChild;
@@ -73,3 +72,5 @@ val = listItem.previousSibling;
 val = listItem.previousElementSibling;
 
 console.log(val);
+
+
