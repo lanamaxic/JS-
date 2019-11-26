@@ -21,14 +21,12 @@ const cardAction = document.querySelector('.card-action');
 // Replace
 cardAction.replaceChild(newHeading, oldHeading);
 
-
 //EXERCISE REPLACE LI WITH A NEW ONE(replace text node)
 const listText = document.querySelector('.collection-item').firstChild;
 console.log(listText)
 let newText = document.createTextNode('New Item')
 let firstLi = document.querySelector('.collection-item')
 //firstLi.replaceChild(newText,listText)
-
 
 // REMOVE ELEMENT
 const lis = document.querySelectorAll('li');
@@ -40,9 +38,7 @@ lis[0].remove();
 // Remove child element
 list.removeChild(lis[3]);
 
-
 let listt = Array.from(document.querySelectorAll('li'));
-
 
 listt.forEach(function(item) {
     console.log(item);
@@ -51,7 +47,7 @@ listt.forEach(function(item) {
 });
 
 
-/* CLASSES & ATTR
+//CLASSES & ATTR
 const firstLi = document.querySelector('li:first-child');
 const link = firstLi.children[0];
 
