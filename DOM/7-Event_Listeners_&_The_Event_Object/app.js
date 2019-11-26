@@ -1,5 +1,5 @@
 // document.querySelector('.clear-tasks').addEventListener('click', function(e){
-//   console.log('Hello World');
+// console.log('Hello World');
 
 //   //e.preventDefault();
 // });
@@ -18,6 +18,8 @@ function onClick(e){
   val = e.target.id;
   val = e.target.className;
   val = e.target.classList;
+   
+  e.target.className = 'clear-tasks btn red';
 
   // Event type
   val = e.type;
