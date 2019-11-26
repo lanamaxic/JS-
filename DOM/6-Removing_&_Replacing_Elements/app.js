@@ -1,7 +1,7 @@
 //REPLACE ELEMENTS
 
 //Create Element
-const newHeading = document.createElement('h2');
+/*const newHeading = document.createElement('h2');
 
 // Add id
 newHeading.id = 'task-title';
@@ -44,7 +44,7 @@ listt.forEach(function(item) {
     console.log(item);
     if (item.innerText == 'DONE')
     item.remove();
-});
+});*/
 
 
 //CLASSES & ATTR
@@ -55,7 +55,7 @@ let val;
 
 // Classes
 val = link.className;
-val = link.classList;
+val = link.classList;//DOMToken List
 val = link.classList[0];
 link.classList.add('test');
 link.classList.remove('test');
@@ -64,9 +64,21 @@ val = link;
 // Attributes
 val = link.getAttribute('href');
 val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('title');
+link.setAttribute('title', 'Google'); //make a new attribute
+val = link.hasAttribute('title'); //check if there is an attribute, returns boolean value
 link.removeAttribute('title');
 val = link;
 
-console.log(val);*/
+console.log(val);
+
+////EXERCISE/////
+
+const li = Array.from(document.querySelectorAll('li'));
+li.forEach(function(item) {
+    
+    if (item.innerText == 'DONE'){
+        item.firstElementChild.setAttribute('href', 'https://digitalcareerinstitute.org');
+    }       
+    }); 
+
+///////////////////
