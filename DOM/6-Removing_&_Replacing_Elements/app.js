@@ -47,7 +47,7 @@ listt.forEach(function(item) {
 });*/
 
 
-//CLASSES & ATTR
+/*//CLASSES & ATTR
 const firstLi = document.querySelector('li:first-child');
 const link = firstLi.children[0];
 
@@ -71,7 +71,7 @@ val = link;
 
 console.log(val);
 
-////EXERCISE/////
+////EXERCISE 1/////
 
 const li = Array.from(document.querySelectorAll('li'));
 li.forEach(function(item) {
@@ -79,6 +79,15 @@ li.forEach(function(item) {
     if (item.innerText == 'DONE'){
         item.firstElementChild.setAttribute('href', 'https://digitalcareerinstitute.org');
     }       
-    }); 
+    }); */
 
-///////////////////
+////////EXERCISE 2///////////
+const del = Array.from(document.querySelectorAll('.delete-item'));//=> <a>
+
+del.forEach(function(item){
+  
+  item.addEventListener('click',function(i){
+      console.log(i.target)
+      item.parentElement.remove();
+  })
+})
