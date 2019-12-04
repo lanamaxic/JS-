@@ -56,3 +56,13 @@ var msg = document.querySelector("#justtext").value;
 
 
 //tArea.appendChild()
+
+let table = document.getElementById('bagua-table');
+
+let editingTd;
+
+table.addEventListener('click', makeTdEditable)
+
+function makeTdEditable(event) {
+    
+}
