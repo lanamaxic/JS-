@@ -58,19 +58,3 @@ for(i=0;i<books.length;i++){
   badge.innerText = 'Read';
   } 
 }
-
-
-document.querySelector(".book-list").style.listStyle = "none";
-books.forEach(function (i) {
-let li = document.createElement("li");
-document.querySelector(".book-list").appendChild(li);
-//console.log(li)
-const div = document.createElement("div");
-li.appendChild(div);
-div.className = "book";
-const img = document.createElement("img");
-img.setAttribute("src", i.img)
-div.appendChild(img);
-img.className = "book-cover";
-div.appendChild(document.createTextNode(i.title))
-})

@@ -1,4 +1,4 @@
-const td = document.querySelectorAll('td');
+/*const td = document.querySelectorAll('td');
 console.log(td)
 
 let arr = Array.from(td);
@@ -26,7 +26,7 @@ tArea.value = td.innerHTML;
 td.innerHTML = "";
 td.appendChild(tArea)
 
-let getValue = document.querySelector('.edit-area');
+let getValue = document.querySelector('.edit-area');*/
 
 /*
 document.addEventListener("click", function (event) {
@@ -57,12 +57,57 @@ var msg = document.querySelector("#justtext").value;
 
 //tArea.appendChild()
 
+
+
+
+
+
+//GETTING MY TARGET
 let table = document.getElementById('bagua-table');
 
+//for saving my original td
 let editingTd;
 
 table.addEventListener('click', makeTdEditable)
 
-function makeTdEditable(event) {
+//3 possible targets
+let target = event.target.closest('.edit-cancel, .edit-ok, td')
+if(target.className == '.edit-cancel'){
+    finishTdEdit()
+} else if(target.className == '.edit-ok'){
+    finishTdEdit()
+} else if(target.nodeName == 'TD'){
+    makeTdEditable(target)
+}
+
+function finishTdEdit(){
     
+}
+
+//Event Handler: currently the real event target is the td
+function makeTdEditable(event) {
+    let td = event.target
+    editingTd = {
+        elem: td,
+        data: td.innerHTML
+    }
+
+    //td is in edit state, css also styles the area inside
+    td.classList.add('edit-td')
+
+    //creating my text area
+    let textArea = document.createElement('textarea')
+    textArea.style.width = td.clientWidth + 'px';
+    textArea.style.height = td.clientHeight + 'px';
+    textArea.className = 'edit-area';
+    textArea.value = td.innerHTML;
+    td.innerHTML = '';
+    td.appendChild(textArea);
+    textArea.focus();
+
+    td.insertAdjacentHTML('beforeEnd', '<div class="edit-controls"><button class="edit-ok">OK</button><button class="edit-cancel">Cancel</button></div>');
+
+
+
+
 }

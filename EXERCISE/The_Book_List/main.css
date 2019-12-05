@@ -1,19 +1,26 @@
 .book-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
-  
-  .book {
-    width: 12rem;
-  }
-  
-  .status {
-    font-style: italic;
-  }
-  
-  .book-cover {
-    max-height: 15rem;
-    object-fit: cover;
-    border: 0.2rem solid black;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.book {
+  width: 12rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /*text-align: justify;
+  text-justify: inter-word
+  */
+}
+
+.status {
+  font-style: italic;
+}
+
+.book-cover {
+  max-height: 15rem;
+  object-fit: cover;
+  border: 0.2rem solid black;
+}
+
