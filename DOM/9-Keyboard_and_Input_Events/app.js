@@ -1,16 +1,17 @@
 const form = document.querySelector('form');
 const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
-//const select = document.querySelector('select');
+const select = document.querySelector('select');
 
 // Clear input
 taskInput.value = '';
+console.log(taskInput)
 
 // Submit
 //form.addEventListener('submit', runEvent)
 
 //Keydown
-//taskInput.addEventListener('keydown', runEvent)
+taskInput.addEventListener('keydown', runEvent)
 
 //Keypress
 //taskInput.addEventListener('keypress', runEvent)
@@ -28,13 +29,12 @@ taskInput.value = '';
 
 function runEvent(e){
    //e.preventDefault();
-   console.log(`Event Type: ${e.type} `);
+   console.log(`Event Type: ${e.key} `);
    heading.innerText = e.target.value;
 }
 
 ////////////EXERCISE///////////////
 
-const select = document.querySelector('select');
 
 select.addEventListener('change', function (e) {
     document.querySelector('#task-title').innerHTML = select.value
