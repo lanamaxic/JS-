@@ -68,20 +68,27 @@ let table = document.getElementById('bagua-table');
 //for saving my original td
 let editingTd;
 
-table.addEventListener('click', makeTdEditable)
-
+table.addEventListener('click', function(event){
 //3 possible targets
 let target = event.target.closest('.edit-cancel, .edit-ok, td')
-if(target.className == '.edit-cancel'){
+if(target.className == 'edit-cancel'){
     finishTdEdit()
-} else if(target.className == '.edit-ok'){
+} else if(target.className == 'edit-ok'){
     finishTdEdit()
 } else if(target.nodeName == 'TD'){
     makeTdEditable(target)
 }
+})
 
-function finishTdEdit(){
-    
+
+
+function finishTdEdit(td, isOk){
+    console.log(td)
+    if(isOk) {
+        td.innerHTML = td.firstChild.value
+    } else{
+        td.innerHTML = editingTd.data
+    }
 }
 
 //Event Handler: currently the real event target is the td
@@ -106,8 +113,4 @@ function makeTdEditable(event) {
     textArea.focus();
 
     td.insertAdjacentHTML('beforeEnd', '<div class="edit-controls"><button class="edit-ok">OK</button><button class="edit-cancel">Cancel</button></div>');
-
-
-
-
 }
