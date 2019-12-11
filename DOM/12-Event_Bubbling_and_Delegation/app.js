@@ -16,7 +16,7 @@
 //   console.log('col');
 // });
 
-// EVENT DELGATION
+// EVENT DELEGATION
 
 // const delItem = document.querySelector('.delete-item');
 
