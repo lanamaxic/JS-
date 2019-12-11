@@ -13,4 +13,5 @@ pre {
 
 #mouse:focus {
     outline: 1px dashed black;
+    margin: auto;
 }

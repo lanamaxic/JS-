@@ -2,6 +2,7 @@ mouse.tabIndex = 0;
     
 mouse.onclick = function() {
   this.style.left = this.getBoundingClientRect().left + 'px';
+  console.log(this.getBoundingClientRect())
   this.style.top = this.getBoundingClientRect().top + 'px';
 
   this.style.position = 'fixed';
