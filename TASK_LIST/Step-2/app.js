@@ -19,7 +19,10 @@ form.addEventListener('submit', addTask)
 taskList.addEventListener('click', removeTask)
 
 //Clear Tasks event
-clearBtn.addEventListener()
+clearBtn.addEventListener('click', clearBtn)
+
+//Filter tasks even
+filter.addEventListener('keyup', filterTasks)
 
 }
 //Add Task Event Handler
@@ -62,7 +65,29 @@ function addTask(e){
 //Remove Task Event handler
 function removeTask(e){
   //choosing our target: class ".delete-item"
-    let target = e.target.closest('.delete-item').parentElement
-    target.remove()
-    console.log(target)
+    // let target = e.target.closest('.delete-item')
+    // if(target){
+    //     target.parentElement.remove()
+    // }
+    if(e.target.parentElement.classList.contains('delete-item')){
+        if(confirm('Are you sure')){
+         e.target.parentElement.parentElement.remove();
+        }
+    }
+     
+}
+
+//Clear Tasks event handler
+function clearTasks(e){
+    //taskList.innerHTML = ''
+
+    //Faster: taskList.firstChild
+    while(taskList.firstChild){
+        taskList.removeChild(taskList.firstChild)
+    }
+    e.preventDefault();
+}
+
+function filterTasks(e){
+let arr = []
 }
