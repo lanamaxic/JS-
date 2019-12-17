@@ -62,13 +62,12 @@ function addTask(e) {
     e.preventDefault();
 }
 
-    //Store Task
-    function storeTaskInLocalStorage(task) {
+//Store Task
+function storeTaskInLocalStorage(task) {
     //Initialize the Tasks Array
     let tasks;
-
-    //Getting the Tasks Array from LS
-    //Check if there is no Tasks yet, define it as empty array
+    //Getting the Tasks Array from LS and Check if there is no Tasks yet,
+    //define it as empty array
     if (localStorage.getItem('tasks') === null) {
         tasks = []
         //else take it ready and assign it to tasks array
@@ -81,19 +80,7 @@ function addTask(e) {
     localStorage.setItem('tasks', JSON.stringify(tasks))
 }
 
-    console.log(tasks);
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(tasks);
 
 
 //Remove Task Event handler
@@ -106,10 +93,46 @@ function removeTask(e) {
     if (e.target.parentElement.classList.contains('delete-item')) {
         if (confirm('Are you sure')) {
             e.target.parentElement.parentElement.remove();
+            //Remove from LS
+            removeTaskFromLocalStorage(e.target.parentElement.parentElement)
+
         }
     }
 
 }
+
+//Remove from the LS
+function removeTaskFromLocalStorage(taskItem) {
+    console.log(taskItem)
+    //Initialize the tasks array
+    let tasks;
+    //check if there is any tasks in the LocalStorage
+    if (localStorage.getItem('tasks') === null) {
+
+    //if there is no tasks: then tasks = []
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks')); // tasks is the key here; everything is here a STRING with parse we get the original object-structure
+    }
+    //loop inside the tasks array
+    //don't use the forEach when you are changing the same array
+    for (i = 0; i < tasks.length; i++) {
+    //if the task in the task item matches with any task 
+
+    if (tasks[i] == taskItem.textContent) {
+    //then remove it from the tasks array
+    tasks.splice(i, 1)
+    }
+    //after the loop finish reset the tasks array to LS
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+    }
+}
+
+//Clear tasks
+function clearTasks(){
+    localStorage.clear()
+}
+
 
 //Clear Tasks event handler
 function clearTasks(e) {

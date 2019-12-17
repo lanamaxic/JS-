@@ -13,7 +13,7 @@
 // localStorage.setItem('age', '28')
 
 //set session storage item
-// sessionStorage.setItem('name', 'Mr. Harris')
+//sessionStorage.setItem('name', 'Mr. Harris')
 
 //remove from local storage
 // localStorage.removeItem('name')
@@ -43,7 +43,7 @@
 //     localStorage.removeItem(key)
 // }
 
-// function clearFunction(){
+//function clearFunction(){
 //localStorage.clear()
 // }
 
