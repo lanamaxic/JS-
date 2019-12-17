@@ -12,6 +12,10 @@ loadEventListeners();
 
 //Defining the function that loads all event listeners
 function loadEventListeners() {
+
+    //DOM Load event
+    document.addEventListener('DOMContentLoaded', getTasks)
+
     //Add Task Event
     form.addEventListener('submit', addTask)
 
@@ -23,6 +27,20 @@ function loadEventListeners() {
 
     //Filter tasks even
     filter.addEventListener('keyup', filterTasks)
+
+    //Get Tasks from LS
+    function getTasks(){
+        //initialize tasks
+        let tasks;
+        if()
+        //check if there is any tasks in LS
+        //if tasks === null then tasks = []
+        //else tasks = the array from LS
+        //loop in tasks array
+        //for every item create list item
+        //the text is the task
+    }
+
 
 }
 //Add Task Event Handler
@@ -65,10 +83,10 @@ function addTask(e) {
 //Store Task
 function storeTaskInLocalStorage(task) {
     //Initialize the Tasks Array
-    let tasks;
+    let deletedTasks;
     //Getting the Tasks Array from LS and Check if there is no Tasks yet,
     //define it as empty array
-    if (localStorage.getItem('tasks') === null) {
+    if (localStorage.getItem('deletedTasks') === null) {
         tasks = []
         //else take it ready and assign it to tasks array
     } else {
@@ -105,15 +123,18 @@ function removeTask(e) {
 function removeTaskFromLocalStorage(taskItem) {
     console.log(taskItem)
     //Initialize the tasks array
-    let tasks;
+    let deletedTasks;
     //check if there is any tasks in the LocalStorage
-    if (localStorage.getItem('tasks') === null) {
+    if (localStorage.getItem('deletedTasks') === null) {
 
     //if there is no tasks: then tasks = []
-        tasks = [];
+    deletedTasks = [];
     } else {
-        tasks = JSON.parse(localStorage.getItem('tasks')); // tasks is the key here; everything is here a STRING with parse we get the original object-structure
+        tasks = JSON.parse(localStorage.getItem('deletedTasks')); // tasks is the key here; everything is here a STRING with parse we get the original object-structure
     }
+
+    //Push the task to it
+    deletedTasks.push(taskItem.textContent)
     //loop inside the tasks array
     //don't use the forEach when you are changing the same array
     for (i = 0; i < tasks.length; i++) {
