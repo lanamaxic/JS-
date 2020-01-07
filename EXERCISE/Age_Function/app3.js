@@ -31,7 +31,7 @@ function partyInvite(people) {
     for (i = 0; i < people.length; i++) {
         if (people[i].age >= 18) {
             let li = document.createElement('li')
-            li.textContent = `Hi , ${people[i].name} you are invited to the party`
+            li.textContent = `Hi, ${people[i].name} you are invited to the party`
             ul.appendChild(li)
             li.style.backgroundColor = 'gold'
             li.style.color = 'red'
