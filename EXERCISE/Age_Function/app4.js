@@ -41,8 +41,8 @@ let people = [{
 }, {
     name: 'Clemens',
     HTML: 70,
-    CSS: 80,
-    JS: 70
+    CSS: 30,
+    JS: 40
 }, {
     name: 'Filiz',
     HTML: 90,
