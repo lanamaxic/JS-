@@ -49,13 +49,18 @@ console.log(trainer2)
 // console.log(myDate)
 
 
-function Animal(kind,legs) {
- this.myAnimal = kind,
- this.itLegs = legs,
+function Animal(kind, sound, legs) {
+ this.kind = kind,
+ this.sound = sound
+ this.legs = legs,
  numOfLegs = function(){
-     return this.itLegs
+     return this.legs
+ }
+ this.changeKind = function(newName){
+    this.kind = newName
  }
 }
 
-const animal = new Animal ('dog', 4)
+const animal = new Animal ('dog', 'wuf', 4)
+animal.changeKind('cat')
 console.log(animal)
