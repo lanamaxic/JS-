@@ -23,7 +23,7 @@
 //     firstName: 'Merry',
 //     lastName: 'Christmas',
 //     birthdate: new Date('9-10-1994'),
-//     calculateAge : function() {
+//     calculateAge = function() {
 //         const diff = Date.now() - this.birthdate.getTime()
 //         //now (in ms) and getTime() (in ms)
 //         //diff is the age in ms
@@ -51,7 +51,7 @@ console.log(trainer2)
 
 function Animal(kind, sound, legs) {
  this.kind = kind,
- this.sound = sound
+ this.sound = sound,
  this.legs = legs,
  numOfLegs = function(){
      return this.legs
