@@ -9,7 +9,7 @@ body {
 }
 
 #home-section {
-    background: url('../img/t.jpg');
+    background: url('./img/t.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
