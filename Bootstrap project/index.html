@@ -129,13 +129,13 @@
         </div>
         <div class="col-md-6">
           <h3>Explore & Find Your Favorite Car</h3>
-          <p>Tesla cars were designed from the ground up as an electric vehicles with a highly stable architecture and a battery pack arranged in the underfloor, which offers incredible impact protection.</p>
+          <p class="text-justify">Tesla cars were designed from the ground up as an electric vehicles with a highly stable architecture and a battery pack arranged in the underfloor, which offers incredible impact protection.</p>
           <div class="d-flex">
             <div class="p-4 align-self-start">
               <i class="fas fa-check fa-2x"></i>
 
             </div>
-            <div class="p-4 align-self-end">
+            <div class="p-4 align-self-end text-justify">
                 The Model S sets the standard for industry in terms of performance and safety. With the dual motor all-wheel drive, the adaptive air suspension and the acceleration upgrade, the all-electric Tesla powertrain delivers unparalleled acceleration and performance in all weather conditions.
             </div>
           </div>
@@ -178,7 +178,7 @@
         </div>
         <div class="col-md-6 order-1">
           <h3>Roadster is your Passion</h3>
-          <p>The Roadster, designed as a fully electric super sports car, maximizes the potential of aerodynamic engineering - with record-breaking performance and efficiency.</p>
+          <p class="text-justify">The Roadster, designed as a fully electric super sports car, maximizes the potential of aerodynamic engineering - with record-breaking performance and efficiency.</p>
           <div class="d-flex">
             <div class="p-4 align-self-start">
               <i class="fas fa-check fa-2x"></i>
@@ -193,7 +193,7 @@
               <i class="fas fa-check fa-2x"></i>
 
             </div>
-            <div class="p-4 align-self-end">
+            <div class="p-4 align-self-end text-justify">
                 Thanks to the easily removable glass roof that is stowed in the trunk, it even offers a convertible feeling.
             </div>
           </div>
@@ -208,7 +208,7 @@
       <div class="row">
         <div class="col text-center py-5">
           <h1 class="display-4">Discover Tesla</h1>
-          <p class="lead">Fully electric, so you never have to go to a gas station again. If you recharge at night at home, the battery will be fully charged when you wake up in the morning. And charging is also easy on the go: simply connect to a public charging station or a charging station in the Tesla charging network.</p>
+          <p class="lead text-justify">Fully electric, so you never have to go to a gas station again. If you recharge at night at home, the battery will be fully charged when you wake up in the morning. And charging is also easy on the go: simply connect to a public charging station or a charging station in the Tesla charging network.</p>
           <a href="#" class="btn btn-outline-light">Find Out More</a>
         </div>
       </div>
@@ -225,13 +225,13 @@
         </div>
         <div class="col-md-6">
           <h3>Choose your vehicle</h3>
-          <p>All vehicles come with dual-motor all-wheel drive, premium interior and audio system.</p>
+          <p class="text-justify">All vehicles come with dual-motor all-wheel drive, premium interior and audio system.</p>
           <div class="d-flex">
             <div class="p-4 align-self-start">
               <i class="fas fa-check fa-2x"></i>
 
             </div>
-            <div class="p-4 align-self-end">
+            <div class="p-4 align-self-end text-justify">
                 The control is digital and therefore much more precise than with mechanical power transmission, which guarantees better handling and superior traction under all conditions.
             </div>
           </div>
@@ -240,7 +240,7 @@
               <i class="fas fa-check fa-2x"></i>
 
             </div>
-            <div class="p-4 align-self-end">
+            <div class="p-4 align-self-end text-justify">
                 Your vehicle can also be easily powered by just one engine, so you don't have to worry about getting stuck. If one engine fails, you can safely reach your destination with the second one.
             </div>
       
@@ -251,7 +251,7 @@
                 <i class="fas fa-check fa-2x"></i>
   
               </div>
-              <div class="p-4 align-self-end">
+              <div class="p-4 align-self-end text-justify">
                   The Tesla all-wheel drive uses two separately controlled electric motors. In contrast to conventional all-wheel drive, these two motors control the torque on the front and rear wheels separately. 
               </div>
                
@@ -321,11 +321,7 @@
     //Get the current year for the copywrite
     $('#year').text(new Date().getFullYear());
 
-    //Init Scrollspy
-    $('body').scrollspy({
-      target: '#main-nav'
-    });
-    
+     
     //Smooth Scrolling
     $("#main-nav a").on('click', function(event) {
       if (this.hash !== "") {
@@ -338,6 +334,7 @@
         });
       }
     });
+    
   </script>
 </body>
 

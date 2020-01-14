@@ -37,9 +37,8 @@ body {
     color: #008ed6;
     background: #fff;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
-
 
 
 #modelS-section .fas, #discover-section .fas {
