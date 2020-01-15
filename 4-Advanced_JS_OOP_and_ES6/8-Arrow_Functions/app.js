@@ -24,7 +24,18 @@
 // res = pow(8,3)
 // console.log(res)
 
-let sum = (operand1, operand2) => operand1 + operand2
-let multi = (operand1, operand2) => operand1 * operand2
-let multi = (operand1, operand2) => operand1 / operand2
-let multi = (operand1, operand2) => operand1 / operand2
+// let sum = (operand1, operand2) => operand1 + operand2
+// let multi = (operand1, operand2) => operand1 * operand2
+// let multi = (operand1, operand2) => operand1 / operand2
+// let multi = (operand1, operand2) => operand1 / operand2
+
+
+//array.map() and returns only banana
+let fruits = ['orange','apple', 'banana', 'kiwi', 'avocado']
+
+console.log(fruits.map(item => item == 'banana' ? item : ''))
+console.log(fruits.map(item => item.length))
+console.log(fruits.map(fruit => {if(fruit == 'banana') return fruit}))
+
+let people = ['Kumar','Harris', 'Asmmari', 'Navide', 'Jijish', 'Julia']
+console.log(people.map(person => person == 'Julia' ? 'German Name' : 'Indian Name'))
