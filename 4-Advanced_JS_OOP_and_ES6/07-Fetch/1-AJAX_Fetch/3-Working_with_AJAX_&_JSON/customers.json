@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name" : "Super Mario",
+    "company": "Mushroom.com",
+    "phone": "444-555-6666"
+},
+{
+    "id": 2,
+    "name" : "Super Mario2",
+    "company": "Mushroom.com",
+    "phone": "444-555-6667"
+},
+{
+    "id": 3,
+    "name" : "Super Mario3",
+    "company": "Mushroom.com",
+    "phone": "444-555-6668"
+}  
+]
+
+
+
+
