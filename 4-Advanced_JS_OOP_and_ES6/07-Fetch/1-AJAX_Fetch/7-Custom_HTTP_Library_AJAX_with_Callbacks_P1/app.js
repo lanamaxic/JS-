@@ -1,8 +1,10 @@
 const http = new easyHTTp;
-function anyFunc(items){
+function success(items){
     console.log(items)
 }
+
+function errFunction(){
+    console.log(err)
+}
 //Get Posts
-http.get("https://jsonplaceholder.typicode.com/posts", function(items){
-    console.log(items)
-})
+http.get("https://jsonplaceholder.typicode.com/posts", success, errFunction)
