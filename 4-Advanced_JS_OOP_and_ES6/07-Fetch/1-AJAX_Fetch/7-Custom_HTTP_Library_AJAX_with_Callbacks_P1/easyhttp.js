@@ -1,37 +1,32 @@
-function easyHTTp(){
+function easyHTTP() {
     this.http = new XMLHttpRequest()
 }
 
-
-//Make an HTTP GET Request(better way)
-easyHTTP.prototype.get = function (url){
-    this.http.open('GET', url, true);
-    this.http.onload = () => { // ARROW functions is good here, 'cause .this keyword can't referr to arrow function;it refer to the normal function
-        if(this.http.status === 200){
-            console.log(this.http.responseText);
+// Make an HTTP GET Request 
+easyHTTP.prototype.get = function (url, action){
+   
+    
+    
+    //URL IS : 'https://jsonplaceholder.typicode.com/posts'
+    this.http.open('GET',url,true);
+   // let self = this
+    this.http.onload = () => {
+        if(this.http.status === 200 ){
+            /*action is : function(items){
+                console.log(items)
+             } 
+             items : self.http.responseText
+    */ 
+ 
+         action(null, this.http.responseText)
+           
+        }else{
+            action(`Page Not Found : ${this.http.status} `)
         }
     }
     this.http.send();
+
 }
-
-//Make an HTTP GET Request
-easyHTTp.prototype.get = function(url, action1, action2){
-    this.http.open('GET', url, true);
-    let self = this
-    this.http.onload = function() {
-        if(self.http.status == 200){
-        //    console.log(self.http.responseText)
-        action1('This is just a test')
-        action1(self.http.responseText)
-        } else {
-            action2("Page Not Found")
-        }
-    }
-    this.http.send();
-}
-
-
-
-//Make an HTTP POST Request
-//Make an HTTP PUT Request
-//Make an HTTP DELETE Request
+// Make an HTTP POST Request 
+// Make an HTTP PUT Request 
+// Make an HTTP DELETE Request 
