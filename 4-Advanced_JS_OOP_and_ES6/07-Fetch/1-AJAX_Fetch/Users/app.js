@@ -12,31 +12,31 @@
 // window.onload = function(){
 //     // let div = document.getElementById("someDiv")
 //     // div.innerHTML = "sdfsh"
-    
+
 // }
 
 let div = document.createElement("div")
 
-function showUsers(){
+function showUsers() {
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "users.json", true);
     xhr.send();
-    xhr.onprogress = function(){
+    xhr.onprogress = function () {
         let p = document.createElement("p")
         p.id = "status"
-       p.innerHTML = "Processing..."
-       document.body.appendChild(div)
+        p.innerHTML = "Processing..."
+        document.body.appendChild(div)
     }
-    xhr.onreadystatechange = function(){
+    xhr.onreadystatechange = function () {
         // if(this.readyState == 0){
         //     p.innerHTML = "Request not initialized"
         // }
         // else if(this.readyState == 1)
-        switch(this.readyState){
+        switch (this.readyState) {
             case 0:
                 div.innerHTML = "Request not initialized"
                 break;
-            case 1: 
+            case 1:
                 div.innerHTML = "connection established"
                 break;
             case 2:
@@ -47,7 +47,7 @@ function showUsers(){
                 break;
             case 4:
                 let response = JSON.parse(this.responseText)
-                response.forEach(function(item){
+                response.forEach(function (item) {
                     let p1 = document.createElement("p")
                     p.innerHTML = `Name: ${item.name} Phone: ${item.phone} Email: ${item.email}`
                     div.innerHTML = "Processing..."
