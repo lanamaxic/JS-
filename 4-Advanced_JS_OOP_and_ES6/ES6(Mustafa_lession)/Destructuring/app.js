@@ -11,7 +11,7 @@ console.log(max);
 //console.log(Math.max(1,2,3,4,5,9,57,99));
 /////////////////////////reducing code with --> SPREAD OPERATOR with ...
 
-//using in ARRAYs
+//using REST in ARRAYs
 let arr = [1,2,3,4,5,"str",9,57,99]
 console.log(Math.max(...arr));
 console.log(...arr)
